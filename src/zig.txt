@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+mkdir -p '@tmp'
+curl -L -o '@tmp/zig.tar.xz' 'https://ziglang.org/download/@version/zig-@arch-@version.tar.xz'
+
+rm -rf '/usr/local/zig'
+tar -C '@tmp' -xf '@tmp/zig.tar.xz'
+mv '@tmp/zig-@arch-@version' '/usr/local/zig'
+
+rm -rf '@tmp'
+
+echo 'Please ensure that /usr/local/zig is in PATH'
