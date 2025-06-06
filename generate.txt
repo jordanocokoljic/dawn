@@ -1,4 +1,5 @@
 go      1.24.3  linux-amd64
+go      1.24.4  linux-amd64
 zig     0.14.1  x86_64-linux
 zls     0.14.0  linux-x86_64
 helix   25.01.1 x86_64-linux
