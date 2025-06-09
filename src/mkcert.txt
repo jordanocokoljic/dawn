@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+mkdir -p '@tmp'
+curl -L -o '@tmp/mkcert' 'https://github.com/FiloSottile/mkcert/releases/download/v@version/mkcert-v@version-@arch'
+chmod +x '@tmp/mkcert'
+
+rm -rf '/usr/local/mkcert'
+mkdir '/usr/local/mkcert'
+mv '@tmp/mkcert' '/usr/local/mkcert'
+
+rm -rf '@tmp'
+
+echo 'Please ensure that /usr/local/mkcert is in PATH'
