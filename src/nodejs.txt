@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+mkdir -p '@tmp'
+curl -L -o '@tmp/nodejs.tar.xz' 'https://nodejs.org/dist/v@version/node-v@version-@arch.tar.xz'
+
+rm -rf '/usr/local/nodejs'
+tar -C '@tmp' -xf '@tmp/nodejs.tar.xz'
+mv '@tmp/node-v@version-@arch' '/usr/local/nodejs'
+
+rm -rf '@tmp'
+
+echo 'Please ensure that /usr/local/nodejs/bin is in PATH'
